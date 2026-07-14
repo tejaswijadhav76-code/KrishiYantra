@@ -1,0 +1,6 @@
+{
+  "name": "KrishiYantra",
+  "description": "A farm machinery marketplace and rental platform with dedicated portals for farmers and rental shop owners.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

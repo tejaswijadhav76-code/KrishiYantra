@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-primary: #00652c;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #15803d;
+  --color-on-primary-container: #d3ffd5;
+  --color-secondary: #735c00;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #fed01b;
+  --color-on-secondary-container: #6f5900;
+  --color-tertiary: #97344a;
+  --color-on-tertiary: #ffffff;
+  --color-tertiary-container: #b64c62;
+  --color-on-tertiary-container: #fff1f1;
+  --color-background: #f6fbf2;
+  --color-on-background: #181d17;
+  --color-surface: #f6fbf2;
+  --color-on-surface: #181d17;
+  --color-on-surface-variant: #3f493f;
+  --color-surface-container: #eaefe6;
+  --color-surface-container-low: #f0f5ec;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-high: #e4eae1;
+  --color-surface-container-highest: #dfe4db;
+  --color-outline: #6f7a6e;
+  --color-outline-variant: #becabc;
+  --color-error: #ba1a1a;
+  --color-on-error: #ffffff;
+  
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-background);
+  color: var(--color-on-background);
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+.material-symbols-fill {
+  font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+

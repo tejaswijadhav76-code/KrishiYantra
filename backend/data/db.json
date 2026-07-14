@@ -1,0 +1,596 @@
+{
+  "machines": [
+    {
+      "id": "m-1784009883590",
+      "name": "Tractor",
+      "owner": "Ramesh Farm Rentals (You)",
+      "ownerPhone": "+91 99999 88888",
+      "ownerAvatar": "https://lh3.googleusercontent.com/aida/AP1WRLuun4_Q_lHeO0PO7jA5h9P5bLVC9t6iNCUl9srbIV_l0ODTPTv9r0kl21dVNDd-FSR3DLO5d5D1CtC-XkouEbeMKDvzpaVjB6GMEJiY9V1xUlO7pTWgg6IT48RB_OoFYx0BKykWuW5HULggz5hopp7XBulrAx9qylKX9d3HVN4h24HrnODM4bMPBozzNBQORY18Pgys34hMo_trFJBnVu4UYmlpo3EX9NxrcRPZoMled71kMFvjYmen-6A",
+      "ownerVerified": true,
+      "ownerSince": "2021",
+      "rating": 5,
+      "reviewsCount": 1,
+      "price": 1000,
+      "buyPrice": 85000,
+      "location": "Indore, Madhya Pradesh",
+      "category": "Tillage",
+      "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuAEppjHzNdOVeXVQIFEvs1znaOd1IgZoXKGE1oTMGajzUtOowGXd55xaIs_pKzlvl92jqSkIXfWbzjMCyk-OlPBrrgwTP1Tra9RqRSxxRit2ERi4cAFI8VKOjPIIbausrUsQVHRX_m3VklzxMvy95IPIoesllnlFKiio713XcDY036csy9nwqo4nCkpfttR9smsvoyU5nWFaxzjR44oMxGr4qdISuDas9HC5tesKXOzOE3hQ5PL2_hEZO0g7UAsL7GL7m_gTkSSllbA",
+      "description": "Premium newly listed Tractor machinery managed by Ramesh Farm Rentals. Fully serviced, inspected and ready for rent or purchase.",
+      "specs": [
+        {
+          "label": "Stock Units",
+          "value": "2 Units"
+        }
+      ],
+      "features": [
+        {
+          "label": "Tractor HP",
+          "value": "45-60 HP",
+          "icon": "agriculture"
+        },
+        {
+          "label": "Listing",
+          "value": "Rent & Sale",
+          "icon": "info"
+        }
+      ],
+      "status": "Available",
+      "availableUnits": 2,
+      "totalUnits": 2
+    },
+    {
+      "id": "john-deere-rotavator",
+      "name": "John Deere Rotavator",
+      "owner": "Shri Ram Krishi Kendra",
+      "ownerPhone": "+91 98765 43210",
+      "ownerAvatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuCRxN1uzmrr9mPucOg9OoI40HFZM34aV-CFlIXiUZ2kxlBJvmociV-xoskwHMD_XXQRqL5RE73PGtM5_KELqXppaT3q-UqqWRFHuovAauAsmGMYr1CcM2GUPKg614VHMKj059aIFAbF6OgAwAQktagj_r0h1Kv71et1ggJmmlQEcK0qE_cuqHoaYuOhWEVzBreEO1tjwTrjTrOZw-LfCJ_dHpPI6MrFu69KkZED_U17ktFqTC4Ly6Ei-b37eLPipPSOl7VjDMBqiIDE",
+      "ownerVerified": true,
+      "ownerSince": "2021",
+      "rating": 4.8,
+      "reviewsCount": 120,
+      "price": 1200,
+      "buyPrice": 110000,
+      "location": "Indore, Madhya Pradesh",
+      "category": "Tillage",
+      "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuAEppjHzNdOVeXVQIFEvs1znaOd1IgZoXKGE1oTMGajzUtOowGXd55xaIs_pKzlvl92jqSkIXfWbzjMCyk-OlPBrrgwTP1Tra9RqRSxxRit2ERi4cAFI8VKOjPIIbausrUsQVHRX_m3VklzxMvy95IPIoesllnlFKiio713XcDY036csy9nwqo4nCkpfttR9smsvoyU5nWFaxzjR44oMxGr4qdISuDas9HC5tesKXOzOE3hQ5PL2_hEZO0g7UAsL7GL7m_gTkSSllbA",
+      "description": "The John Deere Rotavator is engineered for high-performance soil preparation. Specifically designed for Indian soil conditions, it provides a superior pulverization effect, making it ideal for various crops like wheat, rice, and sugarcane. Its robust gear-box and multi-speed options ensure maximum efficiency and lower fuel consumption.",
+      "specs": [
+        {
+          "label": "Overall Width",
+          "value": "2050 mm"
+        },
+        {
+          "label": "Working Depth",
+          "value": "150-200 mm"
+        },
+        {
+          "label": "No. of Blades",
+          "value": "42 / 48"
+        },
+        {
+          "label": "Gear Box",
+          "value": "Multi-speed"
+        }
+      ],
+      "features": [
+        {
+          "label": "Max RPM",
+          "value": "210 RPM",
+          "icon": "speed"
+        },
+        {
+          "label": "Blade Type",
+          "value": "L-Type",
+          "icon": "settings_input_component"
+        },
+        {
+          "label": "Working Width",
+          "value": "6 Feet",
+          "icon": "architecture"
+        },
+        {
+          "label": "Tractor HP",
+          "value": "45 - 55 HP",
+          "icon": "agriculture"
+        }
+      ],
+      "status": "Available",
+      "availableUnits": 2,
+      "totalUnits": 5
+    },
+    {
+      "id": "mahindra-gyrovator",
+      "name": "Mahindra Gyrovator",
+      "owner": "Shri Ram Krishi Kendra",
+      "ownerPhone": "+91 98765 43210",
+      "ownerAvatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuCRxN1uzmrr9mPucOg9OoI40HFZM34aV-CFlIXiUZ2kxlBJvmociV-xoskwHMD_XXQRqL5RE73PGtM5_KELqXppaT3q-UqqWRFHuovAauAsmGMYr1CcM2GUPKg614VHMKj059aIFAbF6OgAwAQktagj_r0h1Kv71et1ggJmmlQEcK0qE_cuqHoaYuOhWEVzBreEO1tjwTrjTrOZw-LfCJ_dHpPI6MrFu69KkZED_U17ktFqTC4Ly6Ei-b37eLPipPSOl7VjDMBqiIDE",
+      "ownerVerified": true,
+      "ownerSince": "2021",
+      "rating": 4.7,
+      "reviewsCount": 84,
+      "price": 1100,
+      "buyPrice": 98000,
+      "location": "Indore, Madhya Pradesh",
+      "category": "Tillage",
+      "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuD_o8RZD_LN1B6YAKL4C1zKg729KKyi3fv9fQZG8Uo28xo97lr8BfwPyHe6vuBmGK1dug6q4QW23C_XHhnwOi2D6mhqYZqxXC9Yi6C_qmMP12hKoL7Smtsc_2auF9NZZO9oUm-HvRCbIKpY_UzFgDGTC2Js4GlWfJLovwpknlPah8K1XR1B9C_Wz8ZOAFaz7VavIPqWSr72Nbd7BppFAFaCwdRawuuhrBQSRBDu6jhLrvs3mitwiby4io6G7zImcR8b1i6Wg1Q0yNgU",
+      "description": "A modern orange Mahindra rotavator machine designed to carry out tillage operations cleanly and productively. Built with heavy-duty construction to survive tough terrains with low maintenance requirement.",
+      "specs": [
+        {
+          "label": "Overall Width",
+          "value": "1850 mm"
+        },
+        {
+          "label": "Working Depth",
+          "value": "120-180 mm"
+        },
+        {
+          "label": "No. of Blades",
+          "value": "36 / 42"
+        },
+        {
+          "label": "Gear Box",
+          "value": "Single-speed"
+        }
+      ],
+      "features": [
+        {
+          "label": "Max RPM",
+          "value": "190 RPM",
+          "icon": "speed"
+        },
+        {
+          "label": "Blade Type",
+          "value": "C-Type",
+          "icon": "settings_input_component"
+        },
+        {
+          "label": "Working Width",
+          "value": "5.5 Feet",
+          "icon": "architecture"
+        },
+        {
+          "label": "Tractor HP",
+          "value": "35 - 45 HP",
+          "icon": "agriculture"
+        }
+      ],
+      "status": "Available",
+      "availableUnits": 1,
+      "totalUnits": 3
+    },
+    {
+      "id": "sonalika-multi-speed",
+      "name": "Sonalika Multi-Speed Rotavator",
+      "owner": "Shri Ram Krishi Kendra",
+      "ownerPhone": "+91 98765 43210",
+      "ownerAvatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuCRxN1uzmrr9mPucOg9OoI40HFZM34aV-CFlIXiUZ2kxlBJvmociV-xoskwHMD_XXQRqL5RE73PGtM5_KELqXppaT3q-UqqWRFHuovAauAsmGMYr1CcM2GUPKg614VHMKj059aIFAbF6OgAwAQktagj_r0h1Kv71et1ggJmmlQEcK0qE_cuqHoaYuOhWEVzBreEO1tjwTrjTrOZw-LfCJ_dHpPI6MrFu69KkZED_U17ktFqTC4Ly6Ei-b37eLPipPSOl7VjDMBqiIDE",
+      "ownerVerified": true,
+      "ownerSince": "2021",
+      "rating": 4.6,
+      "reviewsCount": 62,
+      "price": 1350,
+      "buyPrice": 125000,
+      "location": "Indore, Madhya Pradesh",
+      "category": "Tillage",
+      "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuDayJqtoKlHbE-qm9yYlIJbOpY7kr-V9iIVf0SvgO3Gn7HoG7ucpeIgWdDDf6cHisi6vvtlJkXUZbPSBvWXrPuq0HSlezjnA4H_ut2mTjLVj-ATx_w_MWGLeW-iyuoTWZhTK7Uvm-yZT0iMHNnTxmkWGapcxhw7RZEKL_4VQ6-hawjoZ-T2kQWpOC2-kiQYYhcQe3lai8oYxRYQ4YOGO8PT7TSKti5DZJURrMCAhHkdt02FZPEImonXFDxYIRWgd3xV4mkO5RVpZo0t",
+      "description": "A powerful blue Sonalika multi-speed rotavator machine showcased outdoors in a bright sunny field. Great depth adjustment control and superior gear mesh systems.",
+      "specs": [
+        {
+          "label": "Overall Width",
+          "value": "2150 mm"
+        },
+        {
+          "label": "Working Depth",
+          "value": "150-220 mm"
+        },
+        {
+          "label": "No. of Blades",
+          "value": "48 / 54"
+        },
+        {
+          "label": "Gear Box",
+          "value": "Multi-speed"
+        }
+      ],
+      "features": [
+        {
+          "label": "Max RPM",
+          "value": "220 RPM",
+          "icon": "speed"
+        },
+        {
+          "label": "Blade Type",
+          "value": "L-Type",
+          "icon": "settings_input_component"
+        },
+        {
+          "label": "Working Width",
+          "value": "7 Feet",
+          "icon": "architecture"
+        },
+        {
+          "label": "Tractor HP",
+          "value": "50 - 65 HP",
+          "icon": "agriculture"
+        }
+      ],
+      "status": "Available",
+      "availableUnits": 2,
+      "totalUnits": 2
+    },
+    {
+      "id": "pro-power-tiller",
+      "name": "Pro Power Tiller 7HP",
+      "owner": "Shetkari Agri Solutions",
+      "ownerPhone": "+91 91234 56789",
+      "ownerAvatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuCRxN1uzmrr9mPucOg9OoI40HFZM34aV-CFlIXiUZ2kxlBJvmociV-xoskwHMD_XXQRqL5RE73PGtM5_KELqXppaT3q-UqqWRFHuovAauAsmGMYr1CcM2GUPKg614VHMKj059aIFAbF6OgAwAQktagj_r0h1Kv71et1ggJmmlQEcK0qE_cuqHoaYuOhWEVzBreEO1tjwTrjTrOZw-LfCJ_dHpPI6MrFu69KkZED_U17ktFqTC4Ly6Ei-b37eLPipPSOl7VjDMBqiIDE",
+      "ownerVerified": true,
+      "ownerSince": "2020",
+      "rating": 4.8,
+      "reviewsCount": 95,
+      "price": 800,
+      "buyPrice": 65000,
+      "location": "Indore, Madhya Pradesh",
+      "category": "Tillage",
+      "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuCrS84LqeS0h9ab2dvPy_2_OO-vNOhOm_IVai0EuSOKm-KEpsr6cBUs2OdbDVf80S62UrB7j-x2n9_4kTS3xH2chRjczjQchkmVKiRdbm5KyQZmr2__4tzjrJ2x9KXVmt8tAU_rG6AbY_TIQ7CRNz_BnwmiegvWuqR4mrAEAw7u80d53Ibxnc5k2ucSmib0QNQe8v3ScFTwhcTApqIOjANf70Nt03do3VKMMwl_r6bBd-1bjFyXiOYtEfaEmG8CuJ8EGaJzPa_cG1y9",
+      "description": "A heavy-duty green power tiller machine parked in a bright, clean warehouse. High efficiency, low vibration, and adjustable handles make it perfect for precision tilling.",
+      "specs": [
+        {
+          "label": "Engine Power",
+          "value": "7 HP"
+        },
+        {
+          "label": "Weight",
+          "value": "98 kg"
+        },
+        {
+          "label": "Fuel Tank",
+          "value": "3.6 L"
+        },
+        {
+          "label": "Tilling Width",
+          "value": "900 mm"
+        }
+      ],
+      "features": [
+        {
+          "label": "Max RPM",
+          "value": "3600 RPM (Engine)",
+          "icon": "speed"
+        },
+        {
+          "label": "Blade Type",
+          "value": "J-Type Rotary",
+          "icon": "settings_input_component"
+        },
+        {
+          "label": "Working Width",
+          "value": "3 Feet",
+          "icon": "architecture"
+        },
+        {
+          "label": "HP Class",
+          "value": "7 HP",
+          "icon": "agriculture"
+        }
+      ],
+      "status": "Booked",
+      "availableUnits": 0,
+      "totalUnits": 3
+    },
+    {
+      "id": "combine-harvester-x2",
+      "name": "Combine Harvester X2",
+      "owner": "Patil Machinery Hub",
+      "ownerPhone": "+91 94567 12345",
+      "ownerAvatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuCRxN1uzmrr9mPucOg9OoI40HFZM34aV-CFlIXiUZ2kxlBJvmociV-xoskwHMD_XXQRqL5RE73PGtM5_KELqXppaT3q-UqqWRFHuovAauAsmGMYr1CcM2GUPKg614VHMKj059aIFAbF6OgAwAQktagj_r0h1Kv71et1ggJmmlQEcK0qE_cuqHoaYuOhWEVzBreEO1tjwTrjTrOZw-LfCJ_dHpPI6MrFu69KkZED_U17ktFqTC4Ly6Ei-b37eLPipPSOl7VjDMBqiIDE",
+      "ownerVerified": true,
+      "ownerSince": "2019",
+      "rating": 4.5,
+      "reviewsCount": 38,
+      "price": 3500,
+      "buyPrice": 2200000,
+      "location": "Indore, Madhya Pradesh",
+      "category": "Harvesting",
+      "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuBRDU9udN_B8qpaLO83-bOdw91QNdCYC5a-nJEi16UexumKmkuCu7bXR-jkT4xA7KmobSAWfvXYL_aT4rdfLuGCa3iihPObxb0YwQ0Hn214ggbRMPvxJwrB3eRR0YF0MAQD6J0VhOCmDyZXbyJ7jlgjpSMBKJK0LNwjleYhhUh7gMm9bQEl0aQVgQJdiVJDFFfB-GNea6uB8UqEQGjPGVhMn2QwLzCuNxa5Wvgfaa9b5DVYyB7696EaoT8d4uPhe4naY3SliqycIrGC",
+      "description": "A premium red combine harvester designed for massive golden wheat fields during high-speed harvesting season. Optimizes crop throughput and minimizes grain wastage.",
+      "specs": [
+        {
+          "label": "Cutter Bar Width",
+          "value": "4.2 m"
+        },
+        {
+          "label": "Grain Tank Capacity",
+          "value": "3000 L"
+        },
+        {
+          "label": "Engine Power",
+          "value": "110 HP"
+        },
+        {
+          "label": "Threshing Drum",
+          "value": "Beater type"
+        }
+      ],
+      "features": [
+        {
+          "label": "Speed Range",
+          "value": "1.5 - 20 km/h",
+          "icon": "speed"
+        },
+        {
+          "label": "Cutter Bar",
+          "value": "Flexible Head",
+          "icon": "settings_input_component"
+        },
+        {
+          "label": "Cutting Width",
+          "value": "14 Feet",
+          "icon": "architecture"
+        },
+        {
+          "label": "HP Requirement",
+          "value": "110 HP Engine",
+          "icon": "agriculture"
+        }
+      ],
+      "status": "Booked",
+      "availableUnits": 0,
+      "totalUnits": 1
+    },
+    {
+      "id": "precision-seed-drill",
+      "name": "Precision Seed Drill",
+      "owner": "GreenField Equipment",
+      "ownerPhone": "+91 88888 11111",
+      "ownerAvatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuCRxN1uzmrr9mPucOg9OoI40HFZM34aV-CFlIXiUZ2kxlBJvmociV-xoskwHMD_XXQRqL5RE73PGtM5_KELqXppaT3q-UqqWRFHuovAauAsmGMYr1CcM2GUPKg614VHMKj059aIFAbF6OgAwAQktagj_r0h1Kv71et1ggJmmlQEcK0qE_cuqHoaYuOhWEVzBreEO1tjwTrjTrOZw-LfCJ_dHpPI6MrFu69KkZED_U17ktFqTC4Ly6Ei-b37eLPipPSOl7VjDMBqiIDE",
+      "ownerVerified": true,
+      "ownerSince": "2022",
+      "rating": 4.9,
+      "reviewsCount": 74,
+      "price": 1200,
+      "buyPrice": 85000,
+      "location": "Indore, Madhya Pradesh",
+      "category": "Sowing",
+      "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuBR1_v_DPOC-ouv2pPMoUe5XSnOCu_Z6HbYoZX8TuLr-ZhkV1rVC8tO3oEAXaDrPVt_AwNmKPnUc_WZDDHgekNo1KLn-_g5npTg9Jd1BXsawKW_mrB_ajhvGIIs3rCvLmOPKYdq23OkaL5ICZFgylqsKP0pSDH1JrtGGI6nWIrnlLm07XqsNNxv2j4AJUWUZ6jBytiGWHqb6I4IMLAatnfdsK67Z1YeevZUSCWMHKGTlbSh92jPNNhER-YG0-8meUswK37G1LCISzWc",
+      "description": "Advanced seed drill with bright yellow seed box containers and clean safety layout. Perfect for sowing wheat, soybean, maize, and lentils with extreme row-by-row accuracy.",
+      "specs": [
+        {
+          "label": "No. of Rows",
+          "value": "9 / 11 Rows"
+        },
+        {
+          "label": "Row-to-Row Spacing",
+          "value": "Adjustable"
+        },
+        {
+          "label": "Seed Capacity",
+          "value": "55 kg"
+        },
+        {
+          "label": "Fertilizer Capacity",
+          "value": "60 kg"
+        }
+      ],
+      "features": [
+        {
+          "label": "Precision",
+          "value": "Fluted Roller",
+          "icon": "speed"
+        },
+        {
+          "label": "Opener Type",
+          "value": "Double Disc",
+          "icon": "settings_input_component"
+        },
+        {
+          "label": "Working Width",
+          "value": "8 Feet",
+          "icon": "architecture"
+        },
+        {
+          "label": "Tractor HP",
+          "value": "45 - 55 HP",
+          "icon": "agriculture"
+        }
+      ],
+      "status": "Available",
+      "availableUnits": 4,
+      "totalUnits": 4
+    },
+    {
+      "id": "auto-boom-sprayer",
+      "name": "Auto-Boom Sprayer",
+      "owner": "Kisan Mitra Rentals",
+      "ownerPhone": "+91 77777 55555",
+      "ownerAvatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuCRxN1uzmrr9mPucOg9OoI40HFZM34aV-CFlIXiUZ2kxlBJvmociV-xoskwHMD_XXQRqL5RE73PGtM5_KELqXppaT3q-UqqWRFHuovAauAsmGMYr1CcM2GUPKg614VHMKj059aIFAbF6OgAwAQktagj_r0h1Kv71et1ggJmmlQEcK0qE_cuqHoaYuOhWEVzBreEO1tjwTrjTrOZw-LfCJ_dHpPI6MrFu69KkZED_U17ktFqTC4Ly6Ei-b37eLPipPSOl7VjDMBqiIDE",
+      "ownerVerified": true,
+      "ownerSince": "2023",
+      "rating": 5,
+      "reviewsCount": 1,
+      "price": 600,
+      "buyPrice": 48000,
+      "location": "Indore, Madhya Pradesh",
+      "category": "Spraying",
+      "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuA4DXIyXayy1p7VzwX_TFRt8kBKiQFsa230XHmOsLdnL08m2aRlXtXBuVCmJ1I1yFbPZ42-cmOHnPm5qS-WI4lgUZQxIvvi_7ggJkektOZslaV1kGBSnqQsG-nVNW8ZuU3hoOun8rXT9KVk0OAVCc-KKDEoBPmUdWiumgorlmWEiZZDRHU2y39xIsUCAZ7_zl1X1V8BUbvVvB_F6WTig99l9d0J6tWb1Anx2wFvmiYD5d04jfvWK21S20ZxiIFosBbmyfqrisHEQWG0",
+      "description": "High-performance tractor-mounted boom sprayer designed for rapid field coverage. Delivers even mist dispersal and micro-droplet penetration into thick vegetable and crop canopies.",
+      "specs": [
+        {
+          "label": "Tank Capacity",
+          "value": "400 L"
+        },
+        {
+          "label": "Boom Length",
+          "value": "12 m"
+        },
+        {
+          "label": "Nozzles Count",
+          "value": "24"
+        },
+        {
+          "label": "Pump Pressure",
+          "value": "40 bar"
+        }
+      ],
+      "features": [
+        {
+          "label": "Spray Rate",
+          "value": "50-150 L/min",
+          "icon": "speed"
+        },
+        {
+          "label": "Nozzle Type",
+          "value": "Flat Fan",
+          "icon": "settings_input_component"
+        },
+        {
+          "label": "Boom Coverage",
+          "value": "40 Feet",
+          "icon": "architecture"
+        },
+        {
+          "label": "Tractor HP",
+          "value": "35 - 50 HP",
+          "icon": "agriculture"
+        }
+      ],
+      "status": "Available",
+      "availableUnits": 1,
+      "totalUnits": 2
+    },
+    {
+      "id": "mahindra-novo-tractor",
+      "name": "Mahindra Novo 655 DI",
+      "owner": "Shri Ram Krishi Kendra",
+      "ownerPhone": "+91 98765 43210",
+      "ownerAvatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuCRxN1uzmrr9mPucOg9OoI40HFZM34aV-CFlIXiUZ2kxlBJvmociV-xoskwHMD_XXQRqL5RE73PGtM5_KELqXppaT3q-UqqWRFHuovAauAsmGMYr1CcM2GUPKg614VHMKj059aIFAbF6OgAwAQktagj_r0h1Kv71et1ggJmmlQEcK0qE_cuqHoaYuOhWEVzBreEO1tjwTrjTrOZw-LfCJ_dHpPI6MrFu69KkZED_U17ktFqTC4Ly6Ei-b37eLPipPSOl7VjDMBqiIDE",
+      "ownerVerified": true,
+      "ownerSince": "2021",
+      "rating": 4.8,
+      "reviewsCount": 154,
+      "price": 2400,
+      "buyPrice": 890000,
+      "location": "Indore, Madhya Pradesh",
+      "category": "Tillage",
+      "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuBBwTAeAfh0vHw5EjMZXFSlG7TQncZ5ohT93Ih4xHLSjZ0hi7BNCGIGPbK5Yvb8bSe7VR0tRC0OiKxb_JXQmQ7intq7xA00fNPNdxYAGvQoIADyU3qZ5_3dNOhY_eoalhI0hMQFYtYr0n7fjb3MXK69xTUK0jqi--NB2Tcs50f3NMQbEBTkq4E8If7VMOm3Yt9YgIF4pFni5lW0rlUAkeKRtlutcK_fP_15rcroBNu90MKM95Id11RZNT5MquuqqoXZXxStC3KRbhoT",
+      "description": "Mahindra Novo 655 DI is a powerful 65 HP tractor engineered for heavy-duty plowing, sowing, and transport. Offers premium air conditioning cabin option and high lifting capacity of 2200 kg.",
+      "specs": [
+        {
+          "label": "Engine Power",
+          "value": "65 HP"
+        },
+        {
+          "label": "No. of Cylinders",
+          "value": "4"
+        },
+        {
+          "label": "Lift Capacity",
+          "value": "2200 kg"
+        },
+        {
+          "label": "Transmission",
+          "value": "15 Forward + 15 Reverse"
+        }
+      ],
+      "features": [
+        {
+          "label": "PTO Power",
+          "value": "57 HP",
+          "icon": "speed"
+        },
+        {
+          "label": "Clutch Type",
+          "value": "Double Clutch",
+          "icon": "settings_input_component"
+        },
+        {
+          "label": "Lifting Cap",
+          "value": "2.2 Ton",
+          "icon": "architecture"
+        },
+        {
+          "label": "Engine HP",
+          "value": "65 HP",
+          "icon": "agriculture"
+        }
+      ],
+      "status": "Available",
+      "availableUnits": 2,
+      "totalUnits": 5
+    }
+  ],
+  "bookings": [
+    {
+      "id": "booking-1784010173133",
+      "machineId": "pro-power-tiller",
+      "machineName": "Pro Power Tiller 7HP",
+      "machineImage": "https://lh3.googleusercontent.com/aida-public/AB6AXuCrS84LqeS0h9ab2dvPy_2_OO-vNOhOm_IVai0EuSOKm-KEpsr6cBUs2OdbDVf80S62UrB7j-x2n9_4kTS3xH2chRjczjQchkmVKiRdbm5KyQZmr2__4tzjrJ2x9KXVmt8tAU_rG6AbY_TIQ7CRNz_BnwmiegvWuqR4mrAEAw7u80d53Ibxnc5k2ucSmib0QNQe8v3ScFTwhcTApqIOjANf70Nt03do3VKMMwl_r6bBd-1bjFyXiOYtEfaEmG8CuJ8EGaJzPa_cG1y9",
+      "farmerName": "Ramrao Patil",
+      "farmerAvatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuDxeNo9aGLuYdjl3TybTeDw2_mgmxg5mxrIexSqR9ZLHFcyZL9L_Hb5CR7CtZFs35lV0zqzGKcWktX1Mo7Ff0GphZWLvbU9Ok8s-Lt9TIrpovFpqfI3bOF6AkpervaDYyz0IyP4df-7sMemBDNKJUbeVAX0e9wPD1Rzi8-eceWpQjE35bPznT3JlqJsG9iWcpBJ5rbOiXmaeTSG0GLziAeryffo9tT7VkvjJOlUZTam2qIBH9MfDolzffmunFxgBhxOkGsSUoRfG2Cy",
+      "startDate": "Oct 10",
+      "endDate": "Oct 13",
+      "totalDays": 4,
+      "totalPrice": 4700,
+      "status": "Pending",
+      "createdDate": "Today",
+      "isPreBook": true,
+      "quantity": 1,
+      "isPurchase": false
+    },
+    {
+      "id": "booking-1",
+      "machineId": "john-deere-rotavator",
+      "machineName": "John Deere Rotavator",
+      "machineImage": "https://lh3.googleusercontent.com/aida-public/AB6AXuAEppjHzNdOVeXVQIFEvs1znaOd1IgZoXKGE1oTMGajzUtOowGXd55xaIs_pKzlvl92jqSkIXfWbzjMCyk-OlPBrrgwTP1Tra9RqRSxxRit2ERi4cAFI8VKOjPIIbausrUsQVHRX_m3VklzxMvy95IPIoesllnlFKiio713XcDY036csy9nwqo4nCkpfttR9smsvoyU5nWFaxzjR44oMxGr4qdISuDas9HC5tesKXOzOE3hQ5PL2_hEZO0g7UAsL7GL7m_gTkSSllbA",
+      "farmerName": "Suresh Patil",
+      "farmerAvatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuDxeNo9aGLuYdjl3TybTeDw2_mgmxg5mxrIexSqR9ZLHFcyZL9L_Hb5CR7CtZFs35lV0zqzGKcWktX1Mo7Ff0GphZWLvbU9Ok8s-Lt9TIrpovFpqfI3bOF6AkpervaDYyz0IyP4df-7sMemBDNKJUbeVAX0e9wPD1Rzi8-eceWpQjE35bPznT3JlqJsG9iWcpBJ5rbOiXmaeTSG0GLziAeryffo9tT7VkvjJOlUZTam2qIBH9MfDolzffmunFxgBhxOkGsSUoRfG2Cy",
+      "startDate": "2024-10-15",
+      "endDate": "2024-10-18",
+      "totalDays": 4,
+      "totalPrice": 4800,
+      "status": "Approved",
+      "createdDate": "2024-10-09"
+    },
+    {
+      "id": "booking-2",
+      "machineId": "mahindra-novo-tractor",
+      "machineName": "Mahindra Novo 655 DI",
+      "machineImage": "https://lh3.googleusercontent.com/aida-public/AB6AXuBBwTAeAfh0vHw5EjMZXFSlG7TQncZ5ohT93Ih4xHLSjZ0hi7BNCGIGPbK5Yvb8bSe7VR0tRC0OiKxb_JXQmQ7intq7xA00fNPNdxYAGvQoIADyU3qZ5_3dNOhY_eoalhI0hMQFYtYr0n7fjb3MXK69xTUK0jqi--NB2Tcs50f3NMQbEBTkq4E8If7VMOm3Yt9YgIF4pFni5lW0rlUAkeKRtlutcK_fP_15rcroBNu90MKM95Id11RZNT5MquuqqoXZXxStC3KRbhoT",
+      "farmerName": "Mahesh Deshmukh",
+      "farmerAvatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuDyIpsEA65BeBHs9pYcK3o0itlpvzuTQnke34s1UDduGYx_m9jwPKnqhhA0abPcvdKKw3qkcaKMFsQgRXyX-C4cCRH4sFfqUCZ-oT96NdFFdT2JqDgASQH80mxsxTHZtClmifQBxA--DDDdr8SG9HowF1lARbEQDNk90sqCfAhjq-4OcmRe13M-VI1Hd2uf70UhPOJJGk3fJHPZ_W0c9kXfl4qy3GLfgMDOUtu_ju2_3Q57GJ--fTBvaA73jE5illt1r9UJ-V_xsrX2",
+      "startDate": "2024-10-16",
+      "endDate": "2024-10-17",
+      "totalDays": 2,
+      "totalPrice": 4800,
+      "status": "Approved",
+      "createdDate": "2024-10-09"
+    }
+  ],
+  "reviews": {
+    "john-deere-rotavator": [
+      {
+        "id": "review-1",
+        "userName": "Rajesh Kumar",
+        "rating": 5,
+        "comment": "Excellent performance. The machine was well-maintained and delivered on time for the kharif season.",
+        "date": "Oct 2, 2024"
+      },
+      {
+        "id": "review-2",
+        "userName": "Baldev Singh",
+        "rating": 4,
+        "comment": "Great pulverization effect. Lower fuel consumption was a big benefit. Highly recommended.",
+        "date": "Sep 28, 2024"
+      }
+    ],
+    "auto-boom-sprayer": [
+      {
+        "id": "rev-1783949454654",
+        "userName": "Ramrao Patil (You)",
+        "rating": 5,
+        "comment": "nice work",
+        "date": "Today"
+      }
+    ]
+  }
+}
