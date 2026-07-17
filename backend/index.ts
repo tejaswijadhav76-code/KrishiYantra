@@ -27,21 +27,45 @@ if (process.env.FRONTEND_URL) {
   allowedOrigins.push(process.env.FRONTEND_URL.replace(/\/$/, ''));
 }
 
-if (process.env.RENDER_EXTERNAL_URL) {
-  allowedOrigins.push(process.env.RENDER_EXTERNAL_URL.replace(/\/$/, ''));
-}
+const corsOptionsDelegate = (req: express.Request, callback: (err: Error | null, options?: any) => void) => {
+  const origin = req.header('Origin');
+  let allowed = false;
 
-app.use(cors({
-  origin: (origin, callback) => {
-    // Allow requests with no origin (like mobile apps, curl, or same-origin requests)
-    if (!origin || allowedOrigins.includes(origin)) {
-      callback(null, true);
+  if (!origin) {
+    // Allow requests with no origin (like mobile apps, curl, or same-origin simple requests)
+    allowed = true;
+  } else {
+    // Check if whitelisted
+    if (allowedOrigins.includes(origin) || allowedOrigins.includes(origin.replace(/\/$/, ''))) {
+      allowed = true;
     } else {
-      callback(new Error(`Origin ${origin} not allowed by CORS`));
+      // Check if same-origin (matches request host or forwarded host)
+      try {
+        const originUrl = new URL(origin);
+        const requestHost = req.header('Host') || req.headers.host;
+        const forwardedHost = req.header('X-Forwarded-Host') as string;
+        
+        if (
+          originUrl.host === requestHost || 
+          (forwardedHost && originUrl.host === forwardedHost)
+        ) {
+          allowed = true;
+        }
+      } catch (e) {
+        console.error("CORS Origin parse error:", e);
+      }
     }
-  },
-  credentials: true
-}));
+  }
+
+  if (allowed) {
+    callback(null, { origin: true, credentials: true });
+  } else {
+    console.warn(`CORS BLOCKED: Origin ${origin} is not whitelisted`);
+    callback(new Error(`Origin ${origin} not allowed by CORS`));
+  }
+};
+
+app.use(cors(corsOptionsDelegate));
 
 app.use(express.json());
 
