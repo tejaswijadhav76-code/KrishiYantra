@@ -1,4 +1,4 @@
-# KrishiYantra (कृषि यंत्र) 🚜🌾
+# KrishiYantra 🚜🌾
 
 KrishiYantra is a premium farm machinery marketplace and rental platform featuring dedicated, secure portals for Indian farmers and rental shop owners.
 
