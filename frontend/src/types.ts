@@ -60,3 +60,12 @@ export interface Review {
 
 export type ViewType = 'farmer-dashboard' | 'search' | 'detail' | 'booking' | 'owner-dashboard' | 'gps-tracker';
 export type UserRole = 'farmer' | 'owner';
+
+export interface User {
+  phone: string;
+  role: UserRole;
+  name: string;
+  avatar: string;
+  location: string;
+  storeName?: string;
+}

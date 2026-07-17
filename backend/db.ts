@@ -2,7 +2,7 @@ import mongoose, { Schema } from 'mongoose';
 import fs from 'fs/promises';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { Machine, Booking, Review } from '../frontend/src/types';
+import { Machine, Booking, Review, User } from '../frontend/src/types';
 import { INITIAL_MACHINES, INITIAL_BOOKINGS, INITIAL_REVIEWS } from '../frontend/src/data';
 import dotenv from 'dotenv';
 import dns from 'dns';
@@ -30,6 +30,7 @@ interface LocalSchema {
   machines: Machine[];
   bookings: Booking[];
   reviews: Record<string, Review[]>;
+  users: User[];
 }
 
 let dbData: LocalSchema | null = null;
@@ -40,6 +41,10 @@ async function initLocalDb() {
   try {
     const content = await fs.readFile(DB_FILE, 'utf-8');
     dbData = JSON.parse(content);
+    // Backward compatibility: ensure users array exists
+    if (!dbData.users) {
+      dbData.users = [];
+    }
   } catch (e) {
     // Seed local database
     dbData = {
@@ -47,7 +52,8 @@ async function initLocalDb() {
       bookings: INITIAL_BOOKINGS,
       reviews: {
         'john-deere-rotavator': INITIAL_REVIEWS
-      }
+      },
+      users: []
     };
     await saveLocalDb();
   }
@@ -133,10 +139,20 @@ const ReviewSchema = new Schema({
   date: { type: String, required: true }
 });
 
+const UserSchema = new Schema({
+  phone: { type: String, required: true, unique: true },
+  role: { type: String, required: true, enum: ['farmer', 'owner'] },
+  name: { type: String, required: true },
+  avatar: { type: String, required: true },
+  location: { type: String, required: true },
+  storeName: { type: String }
+});
+
 // Compile Models
 const MachineModel = mongoose.models.Machine || mongoose.model('Machine', MachineSchema);
 const BookingModel = mongoose.models.Booking || mongoose.model('Booking', BookingSchema);
 const ReviewModel = mongoose.models.Review || mongoose.model('Review', ReviewSchema);
+const UserModel = (mongoose.models.User || mongoose.model('User', UserSchema)) as any;
 
 let isMongo = false;
 
@@ -388,5 +404,38 @@ export const db = {
 
     await queueWrite(saveLocalDb);
     return review;
+  },
+
+  async getUser(phone: string): Promise<User | null> {
+    const cleanPhone = phone.replace(/\D/g, '').slice(-10);
+    if (!cleanPhone) return null;
+    
+    if (isMongo) {
+      return UserModel.findOne({ phone: { $regex: cleanPhone + '$' } }).lean() as unknown as User | null;
+    }
+    if (!dbData) await initLocalDb();
+    return dbData!.users.find(u => u.phone.replace(/\D/g, '').endsWith(cleanPhone)) || null;
+  },
+
+  async saveUser(user: User): Promise<User> {
+    const cleanPhone = user.phone.replace(/\D/g, '').slice(-10);
+    if (isMongo) {
+      const updated = await UserModel.findOneAndUpdate(
+        { phone: { $regex: cleanPhone + '$' } },
+        { $set: user },
+        { new: true, upsert: true, lean: true }
+      );
+      return updated as unknown as User;
+    }
+
+    if (!dbData) await initLocalDb();
+    const idx = dbData!.users.findIndex(u => u.phone.replace(/\D/g, '').endsWith(cleanPhone));
+    if (idx >= 0) {
+      dbData!.users[idx] = user;
+    } else {
+      dbData!.users.push(user);
+    }
+    await queueWrite(saveLocalDb);
+    return user;
   }
 };

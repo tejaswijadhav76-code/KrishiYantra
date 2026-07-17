@@ -34,6 +34,16 @@ router.post('/auth/verify-otp', async (req: Request, res: Response) => {
   if (otp === storedOtp || otp === '123456') {
     otpStore.delete(phone); // clean up
 
+    // Check if user already exists in DB
+    const existingUser = await db.getUser(phone);
+    if (existingUser) {
+      return res.json({
+        success: true,
+        isExistingUser: true,
+        user: existingUser
+      });
+    }
+
     // Provide default profile info based on role if they are logging in first time
     const defaultProfile = {
       name: role === 'farmer' ? 'Ramrao Patil' : 'Ramesh Deshmukh',
@@ -43,6 +53,7 @@ router.post('/auth/verify-otp', async (req: Request, res: Response) => {
 
     return res.json({
       success: true,
+      isExistingUser: false,
       defaultProfile
     });
   } else {
@@ -70,9 +81,12 @@ router.post('/auth/profile', async (req: Request, res: Response) => {
     storeName: role === 'owner' ? storeName || 'Ramesh Farm Rentals' : undefined
   };
 
+  // Persist user profile in database
+  const savedUser = await db.saveUser(user);
+
   return res.json({
     success: true,
-    user
+    user: savedUser
   });
 });
 

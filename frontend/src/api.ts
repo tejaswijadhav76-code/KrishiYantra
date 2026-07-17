@@ -22,7 +22,9 @@ export const api = {
 
   async verifyOtp(phone: string, otp: string, role: UserRole): Promise<{
     success: boolean;
-    defaultProfile: { name: string; location: string; storeName?: string };
+    isExistingUser?: boolean;
+    user?: any;
+    defaultProfile?: { name: string; location: string; storeName?: string };
   }> {
     const res = await fetch('/api/auth/verify-otp', {
       method: 'POST',
@@ -31,7 +33,9 @@ export const api = {
     });
     return handleResponse<{
       success: boolean;
-      defaultProfile: { name: string; location: string; storeName?: string };
+      isExistingUser?: boolean;
+      user?: any;
+      defaultProfile?: { name: string; location: string; storeName?: string };
     }>(res);
   },
 

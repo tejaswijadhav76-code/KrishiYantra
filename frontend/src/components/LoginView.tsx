@@ -81,11 +81,17 @@ export default function LoginView({ onLoginSuccess }: LoginViewProps) {
     api.verifyOtp(phoneNumber, otpInput, selectedRole)
       .then((res) => {
         setLoading(false);
-        setUserName(res.defaultProfile.name);
-        if (res.defaultProfile.storeName) {
-          setStoreName(res.defaultProfile.storeName);
+        if (res.isExistingUser && res.user) {
+          onLoginSuccess(res.user);
+        } else if (res.defaultProfile) {
+          setUserName(res.defaultProfile.name);
+          if (res.defaultProfile.storeName) {
+            setStoreName(res.defaultProfile.storeName);
+          }
+          setStep('profile');
+        } else {
+          setErrorMsg('Failed to resolve user profile structure.');
         }
-        setStep('profile');
       })
       .catch((err) => {
         setLoading(false);
