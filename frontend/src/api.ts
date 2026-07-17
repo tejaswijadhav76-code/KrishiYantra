@@ -178,5 +178,32 @@ export const api = {
       geofenceActive: boolean;
       geofenceBreached: boolean;
     }>(res);
+  },
+
+  // AI API Calls
+  async chatWithAi(messages: { role: 'user' | 'model'; content: string }[]): Promise<{ reply: string }> {
+    const res = await fetch('/api/ai/chat', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ messages })
+    });
+    return handleResponse<{ reply: string }>(res);
+  },
+
+  async generateListing(name: string, category: string): Promise<{
+    description: string;
+    specs: { label: string; value: string }[];
+    features: { label: string; value: string; icon: string }[];
+  }> {
+    const res = await fetch('/api/ai/generate-listing', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name, category })
+    });
+    return handleResponse<{
+      description: string;
+      specs: { label: string; value: string }[];
+      features: { label: string; value: string; icon: string }[];
+    }>(res);
   }
 };

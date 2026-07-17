@@ -15,6 +15,7 @@ import BookingFlow from './components/BookingFlow';
 import OwnerDashboard from './components/OwnerDashboard';
 import LoginView from './components/LoginView';
 import GpsTracker from './components/GpsTracker';
+import AiChatbot from './components/AiChatbot';
 
 export default function App() {
   const [user, setUser] = useState<{
@@ -116,12 +117,34 @@ export default function App() {
   const [listingMode, setListingMode] = useState<'both' | 'rent' | 'sell'>('both');
   const [newMachineBuyPrice, setNewMachineBuyPrice] = useState(85000);
 
+  // AI-generated states for Add Machinery stock
+  const [newMachineDescription, setNewMachineDescription] = useState('');
+  const [newMachineSpecs, setNewMachineSpecs] = useState<any[]>([]);
+  const [newMachineFeatures, setNewMachineFeatures] = useState<any[]>([]);
+  const [isGeneratingAi, setIsGeneratingAi] = useState(false);
+
+  const handleCloseAddStockModal = () => {
+    setShowAddStockModalApp(false);
+    setNewMachineName('');
+    setNewMachineDescription('');
+    setNewMachineSpecs([]);
+    setNewMachineFeatures([]);
+  };
+
   const handleAddStockApp = (e: React.FormEvent) => {
     e.preventDefault();
     if (!newMachineName.trim()) return;
 
     const finalPrice = listingMode === 'sell' ? 0 : newMachinePrice;
     const finalBuyPrice = listingMode === 'rent' ? undefined : newMachineBuyPrice;
+
+    // Use AI generated description/specs/features if available, otherwise fallback to defaults
+    const finalDescription = newMachineDescription || `Premium newly listed ${newMachineName} machinery managed by Ramesh Farm Rentals. Fully serviced, inspected and ready for ${listingMode === 'sell' ? 'immediate purchase' : 'rent or purchase'}.`;
+    const finalSpecs = newMachineSpecs.length > 0 ? newMachineSpecs : [{ label: 'Stock Units', value: `${newMachineUnits} Units` }];
+    const finalFeatures = newMachineFeatures.length > 0 ? newMachineFeatures : [
+      { label: 'Tractor HP', value: '45-60 HP', icon: 'agriculture' },
+      { label: 'Listing', value: listingMode === 'both' ? 'Rent & Sale' : listingMode === 'rent' ? 'Rent Only' : 'Sale Only', icon: 'info' }
+    ];
 
     const newMachine: Machine = {
       id: `m-${Date.now()}`,
@@ -142,12 +165,9 @@ export default function App() {
         : newMachineCategory === 'Sowing'
         ? 'https://lh3.googleusercontent.com/aida-public/AB6AXuBR1_v_DPOC-ouv2pPMoUe5XSnOCu_Z6HbYoZX8TuLr-ZhkV1rVC8tO3oEAXaDrPVt_AwNmKPnUc_WZDDHgekNo1KLn-_g5npTg9Jd1BXsawKW_mrB_ajhvGIIs3rCvLmOPKYdq23OkaL5ICZFgylqsKP0pSDH1JrtGGI6nWIrnlLm07XqsNNxv2j4AJUWUZ6jBytiGWHqb6I4IMLAatnfdsK67Z1YeevZUSCWMHKGTlbSh92jPNNhER-YG0-8meUswK37G1LCISzWc'
         : 'https://lh3.googleusercontent.com/aida-public/AB6AXuA4DXIyXayy1p7VzwX_TFRt8kBKiQFsa230XHmOsLdnL08m2aRlXtXBuVCmJ1I1yFbPZ42-cmOHnPm5qS-WI4lgUZQxIvvi_7ggJkektOZslaV1kGBSnqQsG-nVNW8ZuU3hoOun8rXT9KVk0OAVCc-KKDEoBPmUdWiumgorlmWEiZZDRHU2y39xIsUCAZ7_zl1X1V8BUbvVvB_F6WTig99l9d0J6tWb1Anx2wFvmiYD5d04jfvWK21S20ZxiIFosBbmyfqrisHEQWG0',
-      description: `Premium newly listed ${newMachineName} machinery managed by Ramesh Farm Rentals. Fully serviced, inspected and ready for ${listingMode === 'sell' ? 'immediate purchase' : 'rent or purchase'}.`,
-      specs: [{ label: 'Stock Units', value: `${newMachineUnits} Units` }],
-      features: [
-        { label: 'Tractor HP', value: '45-60 HP', icon: 'agriculture' },
-        { label: 'Listing', value: listingMode === 'both' ? 'Rent & Sale' : listingMode === 'rent' ? 'Rent Only' : 'Sale Only', icon: 'info' }
-      ],
+      description: finalDescription,
+      specs: finalSpecs,
+      features: finalFeatures,
       status: 'Available',
       availableUnits: newMachineUnits,
       totalUnits: newMachineUnits
@@ -156,7 +176,12 @@ export default function App() {
     api.createMachine(newMachine).then((saved) => {
       setMachines((prev) => [saved, ...prev]);
     }).catch(console.error);
+    
+    // Reset states
     setNewMachineName('');
+    setNewMachineDescription('');
+    setNewMachineSpecs([]);
+    setNewMachineFeatures([]);
     setShowAddStockModalApp(false);
   };
 
@@ -367,6 +392,8 @@ export default function App() {
             onBack={() => setCurrentView(role === 'owner' ? 'owner-dashboard' : 'farmer-dashboard')}
           />
         )}
+
+        {role === 'farmer' && <AiChatbot />}
       </main>
 
       {/* Bottom Sticky Tab Bar for Mobile & Quick Desktop Toggles */}
@@ -731,7 +758,7 @@ export default function App() {
               </h3>
               <button
                 type="button"
-                onClick={() => setShowAddStockModalApp(false)}
+                onClick={handleCloseAddStockModal}
                 className="material-symbols-outlined text-outline hover:text-on-surface cursor-pointer text-xl"
               >
                 close
@@ -764,6 +791,70 @@ export default function App() {
                   <option value="Spraying">Spraying</option>
                 </select>
               </div>
+
+              {/* AI Auto-Generate Button */}
+              <div className="pt-1">
+                <button
+                  type="button"
+                  disabled={isGeneratingAi || !newMachineName.trim()}
+                  onClick={async () => {
+                    setIsGeneratingAi(true);
+                    try {
+                      const data = await api.generateListing(newMachineName, newMachineCategory);
+                      setNewMachineDescription(data.description);
+                      setNewMachineSpecs([...data.specs, { label: 'Stock Units', value: `${newMachineUnits} Units` }]);
+                      setNewMachineFeatures([
+                        ...data.features,
+                        { label: 'Listing', value: listingMode === 'both' ? 'Rent & Sale' : listingMode === 'rent' ? 'Rent Only' : 'Sale Only', icon: 'info' }
+                      ]);
+                    } catch (err: any) {
+                      alert(err.message || 'Failed to generate listing with AI.');
+                    } finally {
+                      setIsGeneratingAi(false);
+                    }
+                  }}
+                  className="w-full bg-primary/10 hover:bg-primary/20 text-primary text-xs font-bold py-2 px-3 rounded-xl border border-primary/20 flex items-center justify-center gap-1.5 transition-colors cursor-pointer disabled:opacity-50"
+                >
+                  <span className="material-symbols-outlined text-sm">auto_awesome</span>
+                  <span>{isGeneratingAi ? 'Generating details...' : 'Auto-Generate Details with AI'}</span>
+                </button>
+              </div>
+
+              {/* AI Generated Listing Details Preview */}
+              {newMachineDescription && (
+                <div className="bg-primary/5 border border-primary/10 rounded-2xl p-3 space-y-2 text-left animate-fade-in max-h-48 overflow-y-auto scrollbar-thin">
+                  <p className="text-[10px] font-bold uppercase tracking-wider text-primary flex items-center gap-1">
+                    <span className="material-symbols-outlined text-[12px] font-bold">auto_awesome</span>
+                    AI Generated Details Preview
+                  </p>
+                  <div className="space-y-1">
+                    <p className="text-[9px] font-bold text-on-surface-variant/80 uppercase tracking-wide">Description</p>
+                    <p className="text-xs text-on-surface leading-relaxed font-semibold">{newMachineDescription}</p>
+                  </div>
+                  
+                  <div className="grid grid-cols-2 gap-3 pt-1.5 border-t border-outline-variant/15">
+                    <div>
+                      <p className="text-[9px] font-bold text-on-surface-variant/80 uppercase tracking-wide">Specs</p>
+                      <ul className="text-[10px] font-semibold text-on-surface space-y-0.5">
+                        {newMachineSpecs.map((s, idx) => (
+                          <li key={idx} className="list-disc list-inside truncate">{s.label}: {s.value}</li>
+                        ))}
+                      </ul>
+                    </div>
+                    <div>
+                      <p className="text-[9px] font-bold text-on-surface-variant/80 uppercase tracking-wide">Features</p>
+                      <ul className="text-[10px] font-semibold text-on-surface space-y-0.5">
+                        {newMachineFeatures.map((f, idx) => (
+                          <li key={idx} className="flex items-center gap-1 truncate font-semibold">
+                            <span className="material-symbols-outlined text-[11px] text-primary">{f.icon}</span>
+                            <span>{f.label}: {f.value}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              )}
 
               <div className="space-y-1.5">
                 <label className="text-xs font-bold text-on-surface-variant block">Listed For</label>
@@ -830,7 +921,7 @@ export default function App() {
             <div className="pt-2 flex gap-2">
               <button
                 type="button"
-                onClick={() => setShowAddStockModalApp(false)}
+                onClick={handleCloseAddStockModal}
                 className="flex-1 border border-outline py-3 rounded-xl font-bold text-on-surface hover:bg-surface-container-low transition-all text-xs cursor-pointer"
               >
                 Cancel

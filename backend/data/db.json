@@ -95,8 +95,8 @@
         }
       ],
       "status": "Available",
-      "availableUnits": 2,
-      "totalUnits": 5
+      "availableUnits": 1,
+      "totalUnits": 4
     },
     {
       "id": "mahindra-gyrovator",
@@ -520,6 +520,23 @@
     }
   ],
   "bookings": [
+    {
+      "id": "booking-1784034990794",
+      "machineId": "john-deere-rotavator",
+      "machineName": "John Deere Rotavator",
+      "machineImage": "https://lh3.googleusercontent.com/aida-public/AB6AXuAEppjHzNdOVeXVQIFEvs1znaOd1IgZoXKGE1oTMGajzUtOowGXd55xaIs_pKzlvl92jqSkIXfWbzjMCyk-OlPBrrgwTP1Tra9RqRSxxRit2ERi4cAFI8VKOjPIIbausrUsQVHRX_m3VklzxMvy95IPIoesllnlFKiio713XcDY036csy9nwqo4nCkpfttR9smsvoyU5nWFaxzjR44oMxGr4qdISuDas9HC5tesKXOzOE3hQ5PL2_hEZO0g7UAsL7GL7m_gTkSSllbA",
+      "farmerName": "Ramrao Patil",
+      "farmerAvatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuDxeNo9aGLuYdjl3TybTeDw2_mgmxg5mxrIexSqR9ZLHFcyZL9L_Hb5CR7CtZFs35lV0zqzGKcWktX1Mo7Ff0GphZWLvbU9Ok8s-Lt9TIrpovFpqfI3bOF6AkpervaDYyz0IyP4df-7sMemBDNKJUbeVAX0e9wPD1Rzi8-eceWpQjE35bPznT3JlqJsG9iWcpBJ5rbOiXmaeTSG0GLziAeryffo9tT7VkvjJOlUZTam2qIBH9MfDolzffmunFxgBhxOkGsSUoRfG2Cy",
+      "startDate": "Direct Sale",
+      "endDate": "Immediate",
+      "totalDays": 0,
+      "totalPrice": 110000,
+      "status": "Pending",
+      "createdDate": "Today",
+      "isPreBook": false,
+      "quantity": 1,
+      "isPurchase": true
+    },
     {
       "id": "booking-1784010173133",
       "machineId": "pro-power-tiller",

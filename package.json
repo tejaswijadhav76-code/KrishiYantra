@@ -4,13 +4,15 @@
   "version": "1.0.0",
   "scripts": {
     "install:all": "npm install --prefix frontend && npm install --prefix backend",
+    "build": "npm run install:all && npm run build --prefix frontend",
+    "start": "npm start --prefix backend",
     "dev": "concurrently \"npm run dev --prefix frontend\" \"npm run dev --prefix backend\"",
     "frontend": "npm run dev --prefix frontend",
     "backend": "npm run dev --prefix backend",
     "lint": "npx tsc --noEmit --project frontend/tsconfig.json && npx tsc --noEmit --project backend/tsconfig.json"
   },
   "devDependencies": {
-    "concurrently": "^8.2.2",
+    "concurrently": "^10.0.3",
     "typescript": "^7.0.2"
   }
 }

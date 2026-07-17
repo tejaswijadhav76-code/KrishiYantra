@@ -1,6 +1,7 @@
 import { Router, Request, Response } from 'express';
 import { db } from './db';
 import { Booking, Machine, Review } from '../frontend/src/types';
+import { generateAiChatResponse, generateListingData } from './ai';
 
 export const router = Router();
 
@@ -215,4 +216,35 @@ router.get('/gps/:machineId', async (req: Request, res: Response) => {
     geofenceActive: true,
     geofenceBreached: Math.random() > 0.9
   });
+});
+
+// AI Chatbot Route
+router.post('/ai/chat', async (req: Request, res: Response) => {
+  try {
+    const { messages } = req.body;
+    if (!messages || !Array.isArray(messages)) {
+      return res.status(400).json({ error: 'Conversation messages are required' });
+    }
+    const availableMachines = await db.getMachines();
+    const reply = await generateAiChatResponse(messages, availableMachines);
+    return res.json({ reply });
+  } catch (e: any) {
+    console.error("Route /ai/chat error:", e);
+    return res.status(500).json({ error: 'Failed to generate chat response' });
+  }
+});
+
+// AI Generate Listing Route
+router.post('/ai/generate-listing', async (req: Request, res: Response) => {
+  try {
+    const { name, category } = req.body;
+    if (!name || !category) {
+      return res.status(400).json({ error: 'Machine name and category are required' });
+    }
+    const listing = await generateListingData(name, category);
+    return res.json(listing);
+  } catch (e: any) {
+    console.error("Route /ai/generate-listing error:", e);
+    return res.status(500).json({ error: e.message || 'Failed to auto-generate listing' });
+  }
 });
